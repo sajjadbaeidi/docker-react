@@ -1,0 +1,11 @@
+version: "3"
+services:
+  myweb:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    ports:
+      - "11111:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
