@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - dcoker
+
+before_install:
+  - docker build -t sajjadbaeidi/docker-react -f Dockerfile.dev .
+
+scipts:
+  - docker run sajjadbaeidi/docker-react npm run test -- --coverage
+
+  
